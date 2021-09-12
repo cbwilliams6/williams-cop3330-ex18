@@ -13,21 +13,22 @@ public class App
     {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Press C to convert from Fahrenheit to Celsius.\nPress F to convert from Celsius to Fahrenheit.\nYour choice: ");
+        System.out.print("Press C to convert from Fahrenheit to Celsius.\nPress F to convert from Celsius to Fahrenheit.\nYour choice: ");
         String choice = input.nextLine();
 
         double celsius, fahrenheit, temp = 0;
         String strTemp = "";
 
+        System.out.print("Please enter the temperature in ");
         if(choice.equalsIgnoreCase("c")){
             strTemp = "Fahrenheit";
-            System.out.println("Please enter the temperature in " + strTemp + ": ");
+            System.out.print(strTemp + ": ");
             fahrenheit = input.nextDouble();
             temp = (fahrenheit - 32) * 5 / 9;
         }
         else if(choice.equalsIgnoreCase("f")){
             strTemp = "Celsius";
-            System.out.println("Please enter the temperature in " + strTemp + ": ");
+            System.out.print(strTemp + ": ");
             celsius = input.nextDouble();
             temp = (celsius * 9 / 5) + 32;
         }
